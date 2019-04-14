@@ -786,7 +786,7 @@ const TextInput = createReactClass({
   },
   getDefaultProps(): Object {
     return {
-      allowFontScaling: true,
+      allowFontScaling: false,
       underlineColorAndroid: 'transparent',
     };
   },

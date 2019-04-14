@@ -257,7 +257,7 @@ public abstract class ReactBaseTextShadowNode extends LayoutShadowNode {
   protected float mLineHeight = Float.NaN;
   protected float mLetterSpacing = Float.NaN;
   protected boolean mIsColorSet = false;
-  protected boolean mAllowFontScaling = true;
+  protected boolean mAllowFontScaling = false;
   protected int mColor;
   protected boolean mIsBackgroundColorSet = false;
   protected int mBackgroundColor;
@@ -396,7 +396,7 @@ public abstract class ReactBaseTextShadowNode extends LayoutShadowNode {
     markUpdated();
   }
 
-  @ReactProp(name = ViewProps.ALLOW_FONT_SCALING, defaultBoolean = true)
+  @ReactProp(name = ViewProps.ALLOW_FONT_SCALING, defaultBoolean = false)
   public void setAllowFontScaling(boolean allowFontScaling) {
     if (allowFontScaling != mAllowFontScaling) {
       mAllowFontScaling = allowFontScaling;

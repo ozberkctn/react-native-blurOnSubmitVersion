@@ -28,7 +28,7 @@ inline static UIFont *RCTEffectiveFontFromTextAttributes(const TextAttributes &t
 }
 
 inline static CGFloat RCTEffectiveFontSizeMultiplierFromTextAttributes(const TextAttributes &textAttributes) {
-  return textAttributes.allowFontScaling.value_or(true) && !isnan(textAttributes.fontSizeMultiplier) ? textAttributes.fontSizeMultiplier : 1.0;
+  return textAttributes.allowFontScaling.value_or(false) && !isnan(textAttributes.fontSizeMultiplier) ? textAttributes.fontSizeMultiplier : 1.0;
 }
 
 inline static UIColor *RCTEffectiveForegroundColorFromTextAttributes(const TextAttributes &textAttributes) {

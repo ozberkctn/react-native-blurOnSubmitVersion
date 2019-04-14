@@ -57,7 +57,7 @@ const viewConfig = {
     isHighlighted: true,
     numberOfLines: true,
     ellipsizeMode: true,
-    allowFontScaling: true,
+    allowFontScaling: false,
     disabled: true,
     selectable: true,
     selectionColor: true,
@@ -82,7 +82,7 @@ const viewConfig = {
 class TouchableText extends React.Component<Props, State> {
   static defaultProps = {
     accessible: true,
-    allowFontScaling: true,
+    allowFontScaling: false,
     ellipsizeMode: 'tail',
   };
 

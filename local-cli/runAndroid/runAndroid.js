@@ -263,7 +263,9 @@ function runOnAllDevices(
 ) {
   try {
     const gradleArgs = [];
+    console.log('ozberk1');
     if (args.variant) {
+      if (args.variant == 'staging') packageNameWithSuffix += '.debug';
       gradleArgs.push(
         'install' + args.variant[0].toUpperCase() + args.variant.slice(1),
       );
@@ -275,6 +277,7 @@ function runOnAllDevices(
         'install' + args.flavor[0].toUpperCase() + args.flavor.slice(1),
       );
     } else {
+      packageNameWithSuffix += '.debug';
       gradleArgs.push('installDebug');
     }
 
